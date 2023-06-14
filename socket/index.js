@@ -4,10 +4,18 @@
 const io = new Server(server, {
     cors: {
         origin: 'https://whatsapp-frontend-zeta.vercel.app/',
+        credentials:true
     },
 })
 
+app.use(function (req, res, next) {
 
+    res.header('Access-Control-Allow-Origin', "https://whatsapp-sv52.onrender.com");
+    res.header('Access-Control-Allow-Headers', true);
+    res.header('Access-Control-Allow-Credentials', 'Content-Type');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    next();
+  });
 
 
 
