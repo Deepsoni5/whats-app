@@ -4,9 +4,12 @@ import Route from "./routes/route.js";
 import cors from "cors"
 import bodyParser from "body-parser";
 import  http from'http'
+import { Server } from 'socket.io';
+
 const app = express();
 const server = http.Server(app);
-require("../socket/index.js")(server)
+import socket from  "../socket/index.js";
+socket(server,Server)
 //database ni file databse connect krva mate function banayvu che e che
 Connection();
 //defining port

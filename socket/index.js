@@ -1,6 +1,6 @@
-import { Server } from 'socket.io';
-export default function socket(server){
+ function socket(server,Server){
 
+    console.log("socket loaded")
 const io = new Server(server, {
     cors: {
         origin: 'https://whatsapp-frontend-zeta.vercel.app/',
@@ -53,3 +53,5 @@ io.on('connection', (socket) => {
 
 
 }
+
+export default socket
