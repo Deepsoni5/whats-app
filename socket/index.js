@@ -1,8 +1,9 @@
 import { Server } from 'socket.io';
+export default function socket(server){
 
-const io = new Server(9000, {
+const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'https://whatsapp-frontend-zeta.vercel.app/',
     },
 })
 
@@ -49,3 +50,6 @@ io.on('connection', (socket) => {
         io.emit('getUsers', users);
     })
 })
+
+
+}
