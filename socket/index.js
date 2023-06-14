@@ -3,7 +3,7 @@
     console.log("socket loaded")
 const io = new Server(server, {
     cors: {
-        origin: 'https://whatsapp-frontend-durxxi8jc-deepsoni5.vercel.app/',
+        origin: 'https://whatsapp-frontend-zeta.vercel.app/',
     },
 })
 
