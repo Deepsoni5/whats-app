@@ -1,7 +1,7 @@
 import grid from "gridfs-stream"
 import mongoose from "mongoose"
 
-const url = "https://whatsapp-sv52.onrender.com/"
+const url = "https://whatsapp-sv52.onrender.com"
 
 const conn = mongoose.connection;
 let gfs, gridFsBucket;
