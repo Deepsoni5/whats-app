@@ -33,7 +33,9 @@ io.on('connection', (socket) => {
     //connect
     socket.on("addUser", userData => {
         console.log(userData)
+        console.log(socket.id);
         addUser(userData, socket.id);
+       
         io.emit("getUsers", users);
     })
 
